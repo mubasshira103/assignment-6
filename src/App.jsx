@@ -22,7 +22,7 @@ function App() {
 
   return (
     <>
-    {/* <Navbar></Navbar> */}
+    <Navbar card={card}></Navbar>
     <Banner></Banner>
     <Rating></Rating>
     <Suspense fallback={<span className="loading loading-spinner loading-lg"></span>}>
