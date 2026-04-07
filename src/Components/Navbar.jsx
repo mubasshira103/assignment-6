@@ -36,8 +36,8 @@ const Navbar = ({card}) => {
         </div>
       </div>
     </div>
-<div className='m-2'><a href="">FAQ</a></div>
-    <button  className="btn btn-primary rounded-4xl bg-linear-to-r from-blue-600 to-purple-600 mr-5">Explore Products</button>
+<div className='mx-2 md:mx-3'><a href="">FAQ</a></div>
+    <button  className="btn btn-primary rounded-4xl bg-linear-to-r from-blue-600 to-purple-600 md:mr-4">Explore Products</button>
   </div>
 </div>
   );

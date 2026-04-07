@@ -5,13 +5,10 @@ import group from '../assets/group-5.png'
 
 const Banner = () => {
   return (
-     <div className='w-11/12 mx-auto px-20 grid md:grid-cols-2 justify-between items-center  '>
-          <div className='py-20'>
+     <div className='w-11/12 mx-auto px-2 md:px-20 grid md:grid-cols-2 justify-between items-center  '>
+          <div className='p-1 md:py-20'>
             <div className='flex gap-3 rounded-4xl justify-center items-center w-80 h-10 mb-5 bg-slate-200'>
-                {/* <div>
-                    <div className="bg-blue-300 rounded-full w-6 h-6 absolute  flex items-center justify-center overflow-hidden"></div>
-            <div className="bg-blue-600 rounded-full w-3 h-3 mt-1.5 ml-1.5 object-cover relative  "></div>
-                </div> */}
+
                 <img src={group} alt="" />
             <p className='pb-5 text-purple-600 font-medium pt-5'>New: AI-Powered Tools Available</p>
             </div>
