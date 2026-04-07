@@ -54,7 +54,9 @@ const SelectedCard = ({card ,setCard}) => {
           })
         )}
       </div>
-      <div className='flex justify-between bg-black rounded-3xl py-2 px-4  text-xl mt-5'>
+     {
+      !card.length=="0" && <div>
+       <div className='flex justify-between bg-black rounded-3xl py-2 px-4  text-xl mt-5'>
         <h3 className='text-white'>Total:</h3>
           <h3 className='text-white'> ${total}</h3>
       </div>
@@ -65,6 +67,8 @@ const SelectedCard = ({card ,setCard}) => {
       </button>
 
         </div>
+     }
+     </div>
   );
 };
 
