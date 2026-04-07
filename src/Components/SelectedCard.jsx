@@ -20,16 +20,18 @@ const SelectedCard = ({card ,setCard}) => {
 
 
   return (
-    <div className='w-10/12 mx-auto mt-10'>
+    <div className='w-10/12 mx-auto mt-10 bg-base-200 rounded-3xl shadow p-4'>
 
-            <p className='font-bold text-3xl'>Your cart</p>
+            <p className='font-bold text-2xl'>Your cart</p>
 
 
-<div className="space-y-5">
+<div className="space-y-5 ">
         {card.length === 0 ? (
-          <div className="w-[400px] flex items-center justify-center flex-col gap-4">
+
+            <div className=" p-8 flex items-center justify-center flex-col ">
             <img className='h-8 w-8' src={BannerImage} alt=""></img>
-            <p className='text-center pt-5'>Your cart is empty</p>
+            <p className='text-center font-medium pt-5'>Your cart is empty</p>
+
           </div>
         ) : (
           card.map((data) => {
