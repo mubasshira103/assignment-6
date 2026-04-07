@@ -1,10 +1,17 @@
 import React, { useState } from 'react';
+import { toast } from 'react-toastify';
 
 const CardDetails = ({d,card, setCard}) => {
   const [clickedButton, setClickedButton] =useState(false);
   const handleButton=()=>{
 
+    const isFound= card.find((item)=>item.id == d.id);
+    if(isFound){
+      toast.error("Item already in cart!")
+      return
+    }
     setCard([...card, d]);
+    toast.success(`${d.name} is Selected`)
     setClickedButton(true);
   }
   return (

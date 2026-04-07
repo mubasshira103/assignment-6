@@ -1,10 +1,12 @@
 import React from 'react';
+import {  toast } from 'react-toastify';
 import BannerImage from '../assets/products/shopping-cart.png'
 
 const SelectedCard = ({card ,setCard}) => {
   const handleDeletedItem=(data)=>{
     const filteredData= card.filter((c) => c.id != data.id);
     setCard(filteredData)
+    toast.warn('Item Deleted!!')
 
   }
   const total = card.reduce(
@@ -13,6 +15,7 @@ const SelectedCard = ({card ,setCard}) => {
   );
   const handleCheckout =()=>{
     setCard([]);
+    toast.success("Payement Successfull!!");
   }
 
 
