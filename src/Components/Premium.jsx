@@ -1,4 +1,4 @@
-import React, { use, useState } from 'react';
+import React, { Suspense, use, useState } from 'react';
 import AvailableCard from './AvailableCard';
 import SelectedCard from './SelectedCard';
 
@@ -16,7 +16,11 @@ const Premium = ({premiumData , card, setCard}) => {
             <button onClick={() =>{setSelectedType("cart"); }} className={`btn  px-8 ${selectedType === "cart" ? "text-white bg-linear-to-r from-blue-600 to-purple-600" :""} border-t-neutral-50 rounded-4xl`}>Cart ({card.length}) </button>
       </div>
       {
-        selectedType == "products" ? <AvailableCard card={card} setCard={setCard} data={data}></AvailableCard> : <SelectedCard card={card} setCard={setCard}></SelectedCard>
+        selectedType == "products" ?
+
+          <AvailableCard card={card} setCard={setCard} data={data}></AvailableCard>
+
+        : <SelectedCard card={card} setCard={setCard}></SelectedCard>
       }
 
 

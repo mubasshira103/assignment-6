@@ -15,9 +15,10 @@ const fetchData = async () =>{
   return res.json();
 
 }
+const premiumData= fetchData()
 
 function App() {
-  const premiumData= fetchData()
+
   const [card, setCard] = useState([]);
 
 
@@ -26,9 +27,10 @@ function App() {
     <Navbar card={card}></Navbar>
     <Banner></Banner>
     <Rating></Rating>
-    <Suspense fallback={<span className="loading loading-spinner loading-lg"></span>}>
+     <Suspense fallback={<span className="loading loading-spinner loading-lg"></span>}>
       <Premium card={card} setCard={setCard} premiumData={premiumData}></Premium>
     </Suspense>
+
 
     <Steps></Steps>
     <Pricing></Pricing>
